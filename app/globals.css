@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: #060606;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0a0909 0%, #060606 56%, #040404 100%);
+}
+
+::selection {
+  background: rgba(179, 32, 45, 0.35);
+  color: #fff;
+}
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  body {
+    @apply text-white;
+  }
+
+  section {
+    @apply scroll-mt-24;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10;
+  }
+
+  .panel {
+    @apply rounded-[10px] border border-white/[0.08] bg-white/[0.02] shadow-card;
+  }
+
+  .label {
+    @apply font-sans text-[11px] uppercase tracking-[0.38em] text-crimson/80;
+  }
+
+  .section-title {
+    @apply font-display text-3xl leading-tight text-mist md:text-4xl;
+  }
+
+  .section-copy {
+    @apply max-w-2xl text-sm leading-7 text-white/[0.68] md:text-base;
+  }
+
+  .divider-glow {
+    background: linear-gradient(
+      90deg,
+      rgba(179, 32, 45, 0.88) 0%,
+      rgba(179, 32, 45, 0.34) 55%,
+      transparent 100%
+    );
+  }
+}
